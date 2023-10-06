@@ -3,6 +3,7 @@ body {
 }
 
 .main__advertising {
+  height: 330px;
   background-color: var(--color-light-gray);
   padding: 30px 100px;
   display: flex;

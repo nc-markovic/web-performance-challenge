@@ -12,9 +12,9 @@ const acceptCookies = () => {
 const dynamicContent = () => {
   const teasers = document.querySelectorAll('.teaser__text');
   const marqueeBar = document.querySelector('marquee');
-
+  marqueeBar.innerHTML = CONTENT_BREAKING_NEWS
   // mock content delay
-  setTimeout(() => marqueeBar.innerHTML = CONTENT_BREAKING_NEWS, 3000);
+  //setTimeout(() => marqueeBar.innerHTML = CONTENT_BREAKING_NEWS, 3000);
 
   // create dynamic content
   teasers.forEach((teaser, index) => {
@@ -59,25 +59,25 @@ const cookieLayerInit = () => {
   });
 };
 
-const layoutTrashing = (n) => {
-  for (let i = 0; i < n; i++) {
-    const container = document.querySelector('header');
-    console.log(container.clientTop);
-  }
-};
+// const layoutTrashing = (n) => {
+//   for (let i = 0; i < n; i++) {
+//     const container = document.querySelector('header');
+//     console.log(container.clientTop);
+//   }
+// };
 
-const JSblocking = () => {
-  let n = 1000000;
-  while (n) { n--;}
-}
+// const JSblocking = () => {
+//   let n = 1000000;
+//   while (n) { n--;}
+// }
 
 const initApp = () => {
   const lazyLoadInstance = new LazyLoad();
   
-  layoutTrashing(20);
+  //layoutTrashing(20);
   dynamicContent();
-  setTimeout(() => console.log('Hello World!'), 3000);
-  JSblocking();
+  //setTimeout(() => console.log('Hello World!'), 3000);
+  //JSblocking();
   cookieLayerInit();
   lazyLoadInstance.update();
 };
